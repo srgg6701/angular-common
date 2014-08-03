@@ -1,5 +1,5 @@
 var app=angular.module('App',['ui.router'])
-    .config(function($urlRouterProvider,$stateProvider){
+    .config(function($urlRouterProvider,$stateProvider,$locationProvider){
         $urlRouterProvider
             /*.when("/",{
                 url:'/',
@@ -27,4 +27,5 @@ var app=angular.module('App',['ui.router'])
                 url:'/four',
                 templateUrl:'templates/four.html'
             });
+        $locationProvider.html5Mode(true);
     });
