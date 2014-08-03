@@ -37,7 +37,7 @@ footer {
 
 /* line 43, ../../../scss/default.scss */
 main {
-  background-color: lightcyan;
+  padding-top: 10px;
 }
 
 /* line 46, ../../../scss/default.scss */
@@ -55,21 +55,25 @@ menu li:not(:last-child) a {
 
 /* line 55, ../../../scss/default.scss */
 nav {
+  box-shadow: 0 -10px 10px #eee inset;
   height: 40px;
+  margin: auto -25px !important;
+  padding: 0 10px;
+  padding-bottom: 30px;
 }
 
-/* line 64, ../../../scss/default.scss */
+/* line 68, ../../../scss/default.scss */
 #container {
   height: 100%;
 }
 
-/* line 67, ../../../scss/default.scss */
+/* line 71, ../../../scss/default.scss */
 #footer, #main {
   margin: auto;
   width: 90%;
 }
 
-/* line 71, ../../../scss/default.scss */
+/* line 75, ../../../scss/default.scss */
 #footer {
   background-color: #ddd;
   position: relative;
@@ -77,21 +81,21 @@ nav {
   transform: translateY(-50%);
 }
 
-/* line 75, ../../../scss/default.scss */
+/* line 79, ../../../scss/default.scss */
 #main {
-  background-color: lightyellow;
+  box-shadow: 0 0 4em #ccc;
   margin-bottom: -60px;
   min-height: 100%;
   padding: 10px 25px;
   padding-bottom: 60px;
 }
 
-/* line 83, ../../../scss/default.scss */
+/* line 87, ../../../scss/default.scss */
 #nav a {
   padding: 0 10px;
 }
 
-/* line 87, ../../../scss/default.scss */
+/* line 91, ../../../scss/default.scss */
 #nav, #logo {
   position: relative;
   top: 50%;
