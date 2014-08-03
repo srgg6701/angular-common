@@ -1,0 +1,1 @@
+var pause=function(){if(console.log("i="+i),i++,i>10)console.log("clear Timeout: "+e),clearInterval(e);else var e=setTimeout(pause,1e3)},i=0;pause();
