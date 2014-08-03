@@ -1,8 +1,8 @@
 /* default sass file */
 @import "compass";
-// variables
+// variables come here
 
-// mixins
+// start mixins
 @mixin padding($padding:10px){
   padding:$padding;
 }
@@ -11,6 +11,7 @@
   top: 50%;
   transform: translateY(-50%);
 }
+// end mixins
 
 html, body{
   height: 100%;
@@ -32,6 +33,9 @@ body{
   }
   font-size: 18px;
 }
+a{
+  cursor: pointer;
+}
 footer{
   background-color: #666;
   height: 60px;
@@ -39,10 +43,20 @@ footer{
 main{
   background-color: lightcyan;
 }
+menu{
+  margin: auto;
+  li{
+    display: table-cell;
+    &:not(:last-child) a{
+      border-right: solid 1px #999;
+    }
+  }
+}
 nav{
   height: 40px;
 }
-// classes
+
+// start classes
 
 // end classes
 
@@ -66,12 +80,8 @@ nav{
   padding-bottom: 60px;
 }
 #nav{
-  background: yellow;
   a{
     padding:0 10px;
-    &:not(:last-child){
-      border-right: solid 1px #999;
-   } //
   }
 }
 #nav, #logo{

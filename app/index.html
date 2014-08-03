@@ -18,29 +18,28 @@
     	<div id="container">
         	<div id="main">
             	<nav class="row">
-                    <div id="logo" class="pull-left"><a href="/">Home</a></div>
-                	<div id="nav" class="pull-right">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                        <a href="#">Link 4</a>
-                    </div>
+                    <div id="logo" class="pull-left"><a ui-sref="/">Home</a></div>
+                	<menu id="nav" class="pull-right" ng-controller="navigationController">
+                        <li ng-repeat="menu in menus">
+                            <a ng-repeat="(link,text) in menu" ui-sref="{{link}}" ng-bind="text"></a></li>
+                    </menu>
                 </nav>
                 <main class="row">
-                	<section ng-controller="defaultController">{{content}}
+                	<section>
                         <div ui-view=""></div>
                     </section>
                 </main>
             </div>
             <footer>
             	<div id="footer">
-                    <a href="/">Home</a>
+                    <a ui-sref="/">Home</a>
                 </div>
             </footer>
         </div>
         <script src="static/libs/angular/angular.min.js"></script>
         <script src="static/libs/angular/angular-ui-router.min.js"></script>
         <script src="app.js"></script>
+        <script src="controllers/navigation.js"></script>
         <script src="controllers/default.js"></script>
         <!--<script src="controllers/.js"></script>-->
     </body>
