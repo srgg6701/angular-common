@@ -17,9 +17,11 @@
     <body>
     	<div id="container">
         	<div id="main">
-            	<nav class="row">
-                    <div id="logo" class="pull-left"><a ui-sref="/">Home</a></div>
-                	<menu id="nav" class="pull-right" ng-controller="navigationController">
+            	<nav class="row" ng-controller="navigationController">
+                    <div id="logo" class="pull-left">
+                        <a ui-sref="{{home.link}}" ng-bind="home.text"></a>
+                    </div>
+                	<menu id="nav" class="pull-right">
                         <li ng-repeat="menu in menus">
                             <a ng-repeat="(link,text) in menu" ui-sref="{{link}}" ng-bind="text"></a></li>
                     </menu>

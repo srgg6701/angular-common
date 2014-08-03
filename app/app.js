@@ -1,25 +1,30 @@
 var app=angular.module('App',['ui.router'])
     .config(function($urlRouterProvider,$stateProvider){
-        $urlRouterProvider.otherwise("/");
+        $urlRouterProvider
+            /*.when("/",{
+                url:'/',
+                templateUrl:'templates/default.html'
+            })*/
+            .otherwise("/home");
         $stateProvider
+            .state('home',{
+                url:'/home',
+                templateUrl:'templates/default.html'
+            })
             .state('one',{
-                url:'one/',
+                url:'/one',
                 templateUrl:'templates/one.html'
             })
             .state('two',{
-                url:'two/',
+                url:'/two',
                 templateUrl:'templates/two.html'
             })
             .state('tree',{
-                url:'tree/',
+                url:'/tree',
                 templateUrl:'templates/tree.html'
             })
             .state('four',{
-                url:'four/',
+                url:'/four',
                 templateUrl:'templates/four.html'
-            })
-            .state("default",{
-                url:'/',
-                templateUrl:'templates/default.html'
             });
     });
