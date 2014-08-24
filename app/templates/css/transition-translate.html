@@ -1,0 +1,17 @@
+<style>
+a.foo {
+    background: #69f;
+    color: #000;
+    display: inline-block;
+    padding: 5px 10px;
+    transform: translateX(-20%);
+    transition: background 0.5s ease, transform 1.0s ease;
+    /*    transition: all 0.5s ease;    если для всех - одинаково */
+}
+a.foo:hover {
+    background: #33f;
+    transform: translateX(0);
+}
+</style>
+<h2>Transition (transform)</h2>
+<a href="javascript:void(0)" class="foo">Hover me!</a>

@@ -1,8 +1,10 @@
+/**
+Чтобы использовать rootScope - убрать назначение контроллера для scope в index.html
 var app = angular.module('App',[]);
 app.run(function($rootScope){
     $rootScope.message="Root Scope has revealed!";
-});
-/*var app=angular.module('App',['ui.router'])
+});*/
+var app=angular.module('App',['ui.router'])
    .config(function($urlRouterProvider,$stateProvider,$locationProvider){
         $urlRouterProvider
             .otherwise("/home");
@@ -28,4 +30,4 @@ app.run(function($rootScope){
                 templateUrl:'templates/four.html'
             });
         $locationProvider.html5Mode(true);
-    });*/
+    });

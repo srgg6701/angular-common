@@ -75,13 +75,16 @@ nav {
 
 /* line 75, ../../../scss/default.scss */
 #footer {
-  background-color: #ddd;
+  background-color: #D9E3FF;
+  border-radius: 8px;
+  box-shadow: 0 -4px 20px #999 inset;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  padding: 10px;
 }
 
-/* line 79, ../../../scss/default.scss */
+/* line 82, ../../../scss/default.scss */
 #main {
   box-shadow: 0 0 4em #ccc;
   margin-bottom: -60px;
@@ -90,12 +93,12 @@ nav {
   padding-bottom: 60px;
 }
 
-/* line 87, ../../../scss/default.scss */
+/* line 90, ../../../scss/default.scss */
 #nav a {
   padding: 0 10px;
 }
 
-/* line 91, ../../../scss/default.scss */
+/* line 94, ../../../scss/default.scss */
 #nav, #logo {
   position: relative;
   top: 50%;

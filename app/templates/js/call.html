@@ -1,0 +1,20 @@
+<style>
+    .table{
+        display: table;
+    }
+</style>
+<script>
+    var func = function(property){
+        //
+        this.prop;
+        if(property) this.prop = property;
+        console.log(this.prop);
+        console.dir(this);
+    };
+    var obj = {
+        prop:"Just some property"
+    };
+</script>
+<a href="javascript:func()" class="table">Run func.</a>
+<a href="javascript:func.call(obj)" class="table">Call func.</a>
+<a href="javascript:func.call(obj, 'nice one')" class="table">Call func, giving the property to the obj.</a>

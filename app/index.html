@@ -17,7 +17,7 @@
     <body>
     	<div id="container">
         	<div id="main">
-            	<nav class="row">
+            	<nav class="row" ng-controller="navigationController">
                     <div id="logo" class="pull-left">
                         <a ui-sref="{{home.link}}" ng-bind="home.text"></a>
                     </div>
@@ -27,8 +27,8 @@
                     </menu>
                 </nav>
                 <main class="row">
-                	<section>{{message}}
-                        <!--<div ui-view=""></div>-->
+                	<section>
+                        <div ui-view=""></div>
                     </section>
                 </main>
             </div>
@@ -39,10 +39,10 @@
             </footer>
         </div>
         <script src="static/libs/angular/angular.min.js"></script>
-        <!--<script src="static/libs/angular/angular-ui-router.min.js"></script>-->
+        <script src="static/libs/angular/angular-ui-router.min.js"></script>
         <script src="app.js"></script>
-        <!--<script src="controllers/navigation.js"></script>
-        <script src="controllers/default.js"></script>-->
+        <script src="controllers/navigation.js"></script>
+        <script src="controllers/default.js"></script>
         <!--<script src="controllers/.js"></script>-->
         <script>
         window.onload=function() {

@@ -1,2 +1,2 @@
 cd app
-node ..\scripts\server.js
+nodemon ..\scripts\server.js

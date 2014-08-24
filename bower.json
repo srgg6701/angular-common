@@ -7,6 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "angular": "~1.2.21",
-    "angular-ui-router": "0.2.10"
+    "angular-ui-router": "0.2.10",
+    "flight": "~1.2.0"
   }
 }
