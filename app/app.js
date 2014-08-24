@@ -1,10 +1,10 @@
-var app=angular.module('App',['ui.router'])
-    .config(function($urlRouterProvider,$stateProvider,$locationProvider){
+var app = angular.module('App',[]);
+app.run(function($rootScope){
+    $rootScope.message="Root Scope has revealed!";
+});
+/*var app=angular.module('App',['ui.router'])
+   .config(function($urlRouterProvider,$stateProvider,$locationProvider){
         $urlRouterProvider
-            /*.when("/",{
-                url:'/',
-                templateUrl:'templates/default.html'
-            })*/
             .otherwise("/home");
         $stateProvider
             .state('home',{
@@ -28,4 +28,4 @@ var app=angular.module('App',['ui.router'])
                 templateUrl:'templates/four.html'
             });
         $locationProvider.html5Mode(true);
-    });
+    });*/
