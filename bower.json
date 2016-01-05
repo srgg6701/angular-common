@@ -8,6 +8,7 @@
   "devDependencies": {
     "angular": "~1.2.21",
     "angular-ui-router": "0.2.10",
-    "flight": "~1.2.0"
+    "flight": "~1.2.0",
+    "angular-sanitize": "~1.4.8"
   }
 }

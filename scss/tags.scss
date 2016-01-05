@@ -1,0 +1,46 @@
+a{
+  cursor: pointer;
+  #nav &{
+    padding:0 $padding-common;
+  }
+  menu li:not(:last-child) &{
+    border-right: solid 1px #999;
+  }
+}
+// tags
+body{
+  *{
+    box-sizing: border-box;
+  }
+  // скрыть всё, что после #container - все расширения
+  &>*:not(:nth-child(1)){
+    display: none;
+  }
+  background-color: white;
+  font-size: 18px;
+}
+footer{
+  background-color: #666;
+  height: 60px;
+}
+h1, h2, h3, h4, h5 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+li{
+  menu &{
+    display: table-cell;
+  }
+}
+main{
+  padding-top: $padding-common;
+}
+menu{
+  margin: auto;
+}
+nav{
+  box-shadow: 0 -10px 10px #eee inset;
+  height: 40px;
+  margin: auto -25px !important;
+  padding: 0 $padding-common;
+  padding-bottom: $offset-default;
+}

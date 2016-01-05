@@ -1,69 +1,10 @@
 /* default sass file */
 @import "compass";
-// variables come here
-
-// start mixins
-@mixin padding($padding:10px){
-  padding:$padding;
-}
-@mixin centered-vertical{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-// end mixins
-
-html, body{
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-// tags
-body{
-  *{
-    box-sizing: border-box;
-  }
-  // скрыть всё, что после #container - все расширения
-  &>*:not(:nth-child(1)){
-    display: none;
-  }
-  background-color: white;
-  h1, h2, h3, h4, h5 {
-    font-family: Helvetica, Arial, sans-serif;
-  }
-  font-size: 18px;
-}
-a{
-  cursor: pointer;
-}
-footer{
-  background-color: #666;
-  height: 60px;
-}
-main{
-  padding-top: 10px;
-}
-menu{
-  margin: auto;
-  li{
-    display: table-cell;
-    &:not(:last-child) a{
-      border-right: solid 1px #999;
-    }
-  }
-}
-nav{
-  box-shadow: 0 -10px 10px #eee inset;
-  height: 40px;
-  margin: auto -25px !important;
-  padding: 0 10px;
-  padding-bottom: 30px;
-}
-
-// start classes
-
-// end classes
-
+@import "layout.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "tags.scss";
+@import "classes.scss";
 // ids
 #container{
   height: 100%;
@@ -85,11 +26,6 @@ nav{
   min-height: 100%;
   padding: 10px 25px;
   padding-bottom: 60px;
-}
-#nav{
-  a{
-    padding:0 10px;
-  }
 }
 #nav, #logo{
   @include centered-vertical;

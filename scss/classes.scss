@@ -1,0 +1,26 @@
+.flex{
+  display: flex;
+  padding: $padding-common;
+}
+.bg-lightgreen{
+  background-color: lightgreen;
+}
+.bg-lightskyblue{
+  background-color: lightskyblue;
+}
+.bg-lightyellow{
+  background-color: lightyellow;
+}
+.pad{
+  &>div{
+    margin: auto 10px;
+  }
+}
+.p-first-test{
+  #tr-first-test &{
+    color:darkorange;
+    &:hover{
+      color:blue;
+    }
+  }
+}
