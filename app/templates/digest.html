@@ -1,0 +1,28 @@
+<h2>Используем <code>digest</code></h2>
+Это ─ общий цикл в Angular, состоящий, в свою очередь, из 2-х вложенных циклов ─ <code>$evalAsync</code> и <code>$watch</code>.
+<hr>
+<input type="text" ng-model="input_model" ng-init="input_model='Hello, Dude!'">
+{{ input_model }}
+<hr>
+<div ng-controller="rightMenuController">
+    <h4>Subcontroller</h4>
+    <p>Yep. The folded controller, rightMenuController, <b>reusing</b>.</p>
+    <ul class="nav nav-tabs-justified">
+        <li ng-repeat="menu in menus track by $index">
+            <a ng-repeat="(key, value) in menu" ui-sref="{{value}}" ng-bind="key"></a>
+        </li>
+    </ul>
+</div>
+<div ng-controller="reController">
+    <h4>Here the tree.htm is included like a directive</h4>
+    <ang ng-include="'templates/tree.html'"></ang>
+</div>
+<hr>
+<div example1 ng-show="visible">
+    <h3>{{title}}</h3>
+    <div class="body" ng-transclude></div>
+    <div class="footer">
+        <button ng-click="onOk()">Save changes</button>
+        <button ng-click="onCancel()">Close</button>
+    </div>
+</div>

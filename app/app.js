@@ -4,7 +4,7 @@ var app = angular.module('App',[]);
 app.run(function($rootScope){
     $rootScope.message="Root Scope has revealed!";
 });*/
-var app=angular.module('App',['ui.router'])
+var app=angular.module('App',['ui.router', 'ngSanitize'])
    .config(function($urlRouterProvider,$stateProvider,$locationProvider){
         $urlRouterProvider
             .otherwise("/home");
@@ -28,6 +28,22 @@ var app=angular.module('App',['ui.router'])
             .state('four',{
                 url:'/four',
                 templateUrl:'templates/four.html'
-            });
+            })
+            .state('digest',{
+                url:'/digest',
+                controller:'digestController',
+                templateUrl:'templates/digest.html'
+            })
+            .state('directives',{
+                url:'/directives',
+                controller:'directivesController',
+                templateUrl:'templates/directives.html'
+            })
+           .state('services',{
+               url:'/services',
+               controller:'servicesController',
+               templateUrl:'templates/services.html'
+           });
+
         $locationProvider.html5Mode(true);
     });

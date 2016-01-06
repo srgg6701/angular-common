@@ -10,11 +10,16 @@
         <link rel="stylesheet" href="static/libs/bootstrap/css/bootstrap.css.map"/>
         <link rel="stylesheet" href="static/libs/bootstrap/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="static/libs/bootstrap/css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="static/css/xtra.css">
+        <link rel="stylesheet" href="static/libs/_highlight/styles/default.css">
         <script src="static/libs/jquery/jquery.min.js"></script>
         <script src="static/libs/bootstrap/js/bootstrap.min.js"></script>
         <script src="static/js/default.js"></script>
+        <!---->
+        <script src="static/libs/_highlight/highlight.pack.js"></script>
+        <!---->
     </head>
-    <body>
+    <body ng-cloack ng-controller="defaultController">
     	<div id="container">
         	<div id="main">
             	<nav class="row" ng-controller="navigationController">
@@ -22,12 +27,18 @@
                         <a ui-sref="{{home.link}}" ng-bind="home.text"></a>
                     </div>
                 	<menu id="nav" class="pull-right">
-                        <li ng-repeat="menu in menus">
+                        <li ng-repeat="menu in menus track by $index">
                             <a ng-repeat="(link,text) in menu" ui-sref="{{link}}" ng-bind="text"></a></li>
                     </menu>
                 </nav>
                 <main class="row">
                 	<section>
+                        <div ng-controller="clientIdController as clientCtrl">
+                            clientId: {{clientCtrl.clientId}}
+                        </div>
+                        <div ng-controller="apiTokenController">
+                            token: <element ng-bind="token"></element>
+                        </div>
                         <div ui-view=""></div>
                     </section>
                 </main>
@@ -35,15 +46,29 @@
             <footer>
             	<div id="footer">
                     <a ui-sref="/">Home</a>
+                    <a href="javascript:void(0);" ng-click="show_error=!show_error">Check error</a>
                 </div>
             </footer>
         </div>
+        <div class="bg-danger fixed-bottom right transparent padding15" ng-class="{fadeIn:show_error, fadeOut:!show_error}" ng-bind="error_message"></div>
         <script src="static/libs/angular/angular.min.js"></script>
         <script src="static/libs/angular/angular-ui-router.min.js"></script>
+        <script src="static/libs/angular/angular-sanitize.min.js"></script>
         <script src="app.js"></script>
-        <script src="controllers/navigation.js"></script>
-        <script src="controllers/default.js"></script>
+
+        <script src="services/clientIdService.js"></script>
+        <script src="services/apiTokenService.js"></script>
+
+        <script src="controllers/navigationController.js"></script>
+        <script src="controllers/defaultController.js"></script>
+        <script src="controllers/apiTokenController.js"></script>
+        <script src="controllers/clientIdController.js"></script>
+        <script src="controllers/rightMenuController.js"></script>
+        <script src="controllers/digestController.js"></script>
+        <script src="controllers/reController.js"></script>
+        <script src="controllers/directivesController.js"></script>
         <script src="directives/attempt1.js"></script>
+        <script src="directives/example1.js"></script>
         <!--<script src="controllers/.js"></script>-->
         <script>
         window.onload=function() {

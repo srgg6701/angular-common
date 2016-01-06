@@ -1,79 +1,115 @@
 /* default sass file */
-/* line 16, ../../../scss/default.scss */
+/* line 1, ../../../scss/_layout.scss */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* line 22, ../../../scss/default.scss */
+/* line 1, ../../../scss/_tags.scss */
+a {
+  cursor: pointer;
+}
+/* line 3, ../../../scss/_tags.scss */
+#nav a {
+  padding: 0 10px;
+}
+/* line 6, ../../../scss/_tags.scss */
+menu li:not(:last-child) a {
+  border-right: solid 1px #999;
+}
+
+/* line 11, ../../../scss/_tags.scss */
 body {
   background-color: white;
   font-size: 18px;
 }
-/* line 23, ../../../scss/default.scss */
+/* line 12, ../../../scss/_tags.scss */
 body * {
   box-sizing: border-box;
 }
-/* line 27, ../../../scss/default.scss */
-body > *:not(:nth-child(1)) {
-  display: none;
-}
-/* line 31, ../../../scss/default.scss */
-body h1, body h2, body h3, body h4, body h5 {
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-/* line 36, ../../../scss/default.scss */
-a {
-  cursor: pointer;
-}
-
-/* line 39, ../../../scss/default.scss */
+/* line 22, ../../../scss/_tags.scss */
 footer {
   background-color: #666;
   height: 60px;
 }
 
-/* line 43, ../../../scss/default.scss */
+/* line 26, ../../../scss/_tags.scss */
+h1, h2, h3, h4, h5 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 30, ../../../scss/_tags.scss */
+menu li {
+  display: table-cell;
+}
+
+/* line 34, ../../../scss/_tags.scss */
 main {
   padding-top: 10px;
 }
 
-/* line 46, ../../../scss/default.scss */
+/* line 37, ../../../scss/_tags.scss */
 menu {
   margin: auto;
 }
-/* line 48, ../../../scss/default.scss */
-menu li {
-  display: table-cell;
-}
-/* line 50, ../../../scss/default.scss */
-menu li:not(:last-child) a {
-  border-right: solid 1px #999;
-}
 
-/* line 55, ../../../scss/default.scss */
+/* line 40, ../../../scss/_tags.scss */
 nav {
   box-shadow: 0 -10px 10px #eee inset;
   height: 40px;
   margin: auto -25px !important;
   padding: 0 10px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
-/* line 68, ../../../scss/default.scss */
+/* line 1, ../../../scss/_classes.scss */
+.flex {
+  display: flex;
+  padding: 10px;
+}
+
+/* line 5, ../../../scss/_classes.scss */
+.bg-lightgreen {
+  background-color: lightgreen;
+}
+
+/* line 8, ../../../scss/_classes.scss */
+.bg-lightskyblue {
+  background-color: lightskyblue;
+}
+
+/* line 11, ../../../scss/_classes.scss */
+.bg-lightyellow {
+  background-color: lightyellow;
+}
+
+/* line 15, ../../../scss/_classes.scss */
+.pad > div {
+  margin: auto 10px;
+}
+
+/* line 20, ../../../scss/_classes.scss */
+#tr-first-test .p-first-test {
+  color: darkorange;
+}
+/* line 22, ../../../scss/_classes.scss */
+#tr-first-test .p-first-test:hover {
+  color: blue;
+}
+
+/* line 9, ../../../scss/default.scss */
 #container {
   height: 100%;
 }
 
-/* line 71, ../../../scss/default.scss */
+/* line 12, ../../../scss/default.scss */
 #footer, #main {
   margin: auto;
   width: 90%;
 }
 
-/* line 75, ../../../scss/default.scss */
+/* line 16, ../../../scss/default.scss */
 #footer {
   background-color: #D9E3FF;
   border-radius: 8px;
@@ -84,7 +120,7 @@ nav {
   padding: 10px;
 }
 
-/* line 82, ../../../scss/default.scss */
+/* line 23, ../../../scss/default.scss */
 #main {
   box-shadow: 0 0 4em #ccc;
   margin-bottom: -60px;
@@ -93,12 +129,7 @@ nav {
   padding-bottom: 60px;
 }
 
-/* line 90, ../../../scss/default.scss */
-#nav a {
-  padding: 0 10px;
-}
-
-/* line 94, ../../../scss/default.scss */
+/* line 30, ../../../scss/default.scss */
 #nav, #logo {
   position: relative;
   top: 50%;

@@ -1,0 +1,15 @@
+<h2>Директивы</h2>
+<ul class="list-unstyled">
+    <li ng-repeat="option in content track by $index">
+        <rep ng-repeat="(key, value) in option">
+            <p><b>{{key}}</b> ─ {{value[0]}}</p>
+            <code>{{value[1]}}</code>
+            <br><br>
+        </rep>
+    </li>
+</ul>
+<hr>
+<p ng-bind="preface"></p>
+<p ng-bind-template="{{ preface2 }}: {{ fromTemplate1 }}, {{ fromTemplate2 }}"></p>
+<p ng-bind-html="smallHTML"></p>
+<p ng-bind-html="smallHTML2"></p>

@@ -1,10 +1,10 @@
 /* default sass file */
 @import "compass";
-@import "layout.scss";
-@import "variables.scss";
-@import "mixins.scss";
-@import "tags.scss";
-@import "classes.scss";
+@import "layout";
+@import "variables";
+@import "mixins";
+@import "tags";
+@import "classes";
 // ids
 #container{
   height: 100%;

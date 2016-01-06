@@ -12,10 +12,6 @@ body{
   *{
     box-sizing: border-box;
   }
-  // скрыть всё, что после #container - все расширения
-  &>*:not(:nth-child(1)){
-    display: none;
-  }
   background-color: white;
   font-size: 18px;
 }
