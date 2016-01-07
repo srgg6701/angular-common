@@ -22,15 +22,7 @@
     <body ng-cloack ng-controller="defaultController">
     	<div id="container">
         	<div id="main">
-            	<nav class="row" ng-controller="navigationController">
-                    <div id="logo" class="pull-left">
-                        <a ui-sref="{{home.link}}" ng-bind="home.text"></a>
-                    </div>
-                	<menu id="nav" class="pull-right">
-                        <li ng-repeat="menu in menus track by $index">
-                            <a ng-repeat="(link,text) in menu" ui-sref="{{link}}" ng-bind="text"></a></li>
-                    </menu>
-                </nav>
+            	<nav class="row" ng-controller="navigationController" ng-include="'templates/includes/nav.html'"></nav>
                 <main class="row">
                 	<section>
                         <div ng-controller="clientIdController as clientCtrl">
@@ -56,19 +48,19 @@
         <script src="static/libs/angular/angular-sanitize.min.js"></script>
         <script src="app.js"></script>
 
-        <script src="services/clientIdService.js"></script>
-        <script src="services/apiTokenService.js"></script>
+        <script src="engine/services/clientIdService.js"></script>
+        <script src="engine/services/apiTokenService.js"></script>
 
-        <script src="controllers/navigationController.js"></script>
-        <script src="controllers/defaultController.js"></script>
-        <script src="controllers/apiTokenController.js"></script>
-        <script src="controllers/clientIdController.js"></script>
-        <script src="controllers/rightMenuController.js"></script>
-        <script src="controllers/digestController.js"></script>
-        <script src="controllers/reController.js"></script>
-        <script src="controllers/directivesController.js"></script>
-        <script src="directives/attempt1.js"></script>
-        <script src="directives/example1.js"></script>
+        <script src="engine/controllers/navigationController.js"></script>
+        <script src="engine/controllers/defaultController.js"></script>
+        <script src="engine/controllers/apiTokenController.js"></script>
+        <script src="engine/controllers/clientIdController.js"></script>
+        <script src="engine/controllers/rightMenuController.js"></script>
+        <script src="engine/controllers/digestController.js"></script>
+        <script src="engine/controllers/reController.js"></script>
+        <script src="engine/controllers/directivesController.js"></script>
+        <script src="engine/directives/attempt1.js"></script>
+        <script src="engine/directives/example1.js"></script>
         <!--<script src="controllers/.js"></script>-->
         <script>
         window.onload=function() {

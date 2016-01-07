@@ -1,0 +1,7 @@
+<div id="logo" class="pull-left">
+    <a ui-sref="{{home.link}}" ng-bind="home.text"></a>
+</div>
+<menu id="nav" class="pull-right">
+    <li ng-repeat="menu in menus track by $index">
+        <a ng-repeat="(link,text) in menu" ui-sref="{{link}}" ng-bind="text"></a></li>
+</menu>

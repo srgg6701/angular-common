@@ -1,5 +1,8 @@
 "use strict";
-// см. links.md
+/**
+ * см. links.md
+ * Для GET можно (и нужно!) использовать вариант с использованием cache (см. по ссылке в файле выше)
+ */
 app.factory('dataFactory', ['$http', function ($http) {
     return {
         getData : function(){

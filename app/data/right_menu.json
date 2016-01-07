@@ -1,5 +1,6 @@
 {
   "digest": "digest",
   "watch": "watch",
-  "directives": "directives"
+  "directives": "directives",
+  "promise_and_q":"promise & q library"
 }
