@@ -43,7 +43,12 @@ var app=angular.module('App',['ui.router', 'ngSanitize'])
                url:'/services',
                controller:'servicesController',
                templateUrl:'templates/services.html'
-           });
+           })
+            .state('promise_and_q',{
+                url:'/promise_and_q',
+                controller:'promisesController',
+                templateUrl:'templates/promises_and_q.html'
+            });
 
         $locationProvider.html5Mode(true);
     });

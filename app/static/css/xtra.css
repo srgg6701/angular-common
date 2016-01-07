@@ -1,3 +1,10 @@
+body main p,
+body main li{
+    color:black;
+    font:18px/1.5 Georgia, 'Times New Roman', serif;
+}
+
+
 .transparent{
     opacity: 0;
     pointer-events: none;

@@ -1,0 +1,28 @@
+<h2>Promises & q</h2>
+<h4>Вопрос</h4>
+<p>
+    <a href="https://stackoverflow.com/questions/30511994/what-is-the-difference-between-http-and-q/30512448">https://stackoverflow.com/questions/30511994/what-is-the-difference-between-http-and-q/30512448#30512448</a></p>
+<ol>
+    <li>Какова разница между <code>$http</code> и <code>$q</code>?</li>
+    <li>Когда необходимо использовать <code>$q</code> вместо <code>$http</code> и наоборот?</li>
+    <li>Что является лучшими практиками в использовании <code>$http</code> и <code>$q</code>?</li>
+</ol>
+<hr>
+<h4>Ответы</h4>
+<a href="https://stackoverflow.com/questions/30511994/what-is-the-difference-between-http-and-q/30512448#30512448">1</a>
+<ol>
+    <li>
+        <p><code>$http</code> = angular-сервис для доступа к серверу по http-протоколу.</p>
+        <p><code>$q</code> = angular-сервис, разработанный
+            kris kowalkis как библиотека: <a href="https://github.com/kriskowal/q">https://github.com/kriskowal/q</a>.</p>
+    </li>
+    <li><code>$http</code> использует <code>$q</code> чтобы предоставить доступ <q>отложенный доступ</q> к ресурсам (defered). Однако затруднительно припомнить ситуацию, где бы использовался <code>$q</code> над <code>$http</code>. По крайней мере, если требуется выполнить http-запрос.</li>
+    <li><code>$http</code> использует <code>$q</code>. Т.о., они используются совместно в случаях с http-запросами.</li>
+</ol>
+<a href="https://stackoverflow.com/questions/30511994/what-is-the-difference-between-http-and-q/30512448#1522479">2</a>
+<ol>
+    <li><code>$http</code> извлекает HTTP-запросы в асинхронном режиме. Это означает, что точное время получения ответа сервера неизвестно.
+        <code>$q</code> ─ это сервис, предоставляющий возможность выполнять <b>множественные</b> асинхронные запросы друг за другом. Т.о., можно сказать, что концептуально это ─ разные вещи.</li>
+    <li>Давайте рассмотрим случай, когда вы хотите выполнить несколько асинхронных HTTP-вызовов. У вас может быть возможность вложить их друг в друга (например, 2-й выполняется только при успешном завершении 1-го). Однако возможна ситуация, когда подобных вложенных вызовов очень много и использование <code>$q</code>, как раз, позволит избавиться от нагромождений одного кода внутри другого.</li>
+    <li>Если вы используете единственный HTTP-запрос, достаточно <code>$http</code>-сервиса. В случае множественных вызовов используйте<code>$q</code>.</li>
+</ol>

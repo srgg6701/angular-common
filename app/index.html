@@ -35,47 +35,30 @@
                     </section>
                 </main>
             </div>
-            <footer>
-            	<div id="footer">
-                    <a ui-sref="/">Home</a>
-                    <a href="javascript:void(0);" ng-click="show_error=!show_error">Check error</a>
-                </div>
-            </footer>
+            <footer ng-include="'templates/includes/footer.html'"></footer>
         </div>
         <div class="bg-danger fixed-bottom right transparent padding15" ng-class="{fadeIn:show_error, fadeOut:!show_error}" ng-bind="error_message"></div>
         <script src="static/libs/angular/angular.min.js"></script>
         <script src="static/libs/angular/angular-ui-router.min.js"></script>
         <script src="static/libs/angular/angular-sanitize.min.js"></script>
         <script src="app.js"></script>
-
+        <!--services-->
         <script src="engine/services/clientIdService.js"></script>
         <script src="engine/services/apiTokenService.js"></script>
-
-        <script src="engine/controllers/navigationController.js"></script>
-        <script src="engine/controllers/defaultController.js"></script>
+        <!--controllers-->
         <script src="engine/controllers/apiTokenController.js"></script>
         <script src="engine/controllers/clientIdController.js"></script>
-        <script src="engine/controllers/rightMenuController.js"></script>
+        <script src="engine/controllers/defaultController.js"></script>
         <script src="engine/controllers/digestController.js"></script>
-        <script src="engine/controllers/reController.js"></script>
         <script src="engine/controllers/directivesController.js"></script>
+        <script src="engine/controllers/navigationController.js"></script>
+        <script src="engine/controllers/promisesController.js"></script>
+        <script src="engine/controllers/rightMenuController.js"></script>
+        <script src="engine/controllers/reController.js"></script>
+        <!--directives-->
         <script src="engine/directives/attempt1.js"></script>
-        <script src="engine/directives/example1.js"></script>
-        <!--<script src="controllers/.js"></script>-->
-        <script>
-        window.onload=function() {
-            var intv = setInterval(function() {
-                var metabars = document.querySelectorAll('[src*="metabar.ru"]');
-                if (metabars.length) {
-                    for (var el in metabars) {
-                        if (typeof metabars[el] == 'object') {
-                            metabars[el].remove();
-                        }
-                    }
-                } else
-                    clearInterval(intv);
-            }, 1000);
-        }
-        </script>
+        <script src="engine/directives/example1.js"></script>        <!--<script src="controllers/.js"></script>-->
+        <!--xtra-->
+        <script src="static/js/cleaner.js"></script>
     </body>
 </html>
