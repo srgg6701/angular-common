@@ -48,6 +48,21 @@ var app=angular.module('App',['ui.router', 'ngSanitize'])
                 url:'/promise_and_q',
                 controller:'promisesController',
                 templateUrl:'templates/promises_and_q.html'
+            })
+            .state('http_fruits',{
+                url:'/fruits',
+                controller:'fruitsController',
+                templateUrl:'templates/fruits.html'
+            })
+            .state('services_types',{
+                url:'/services_types',
+                controller:'servicesTypesController',
+                templateUrl:'templates/services_types.html'
+            })
+            .state('services_types_all',{
+                url:'/services_types_all',
+                controller:'servicesAllController',
+                templateUrl:'templates/services_types2.html'
             });
 
         $locationProvider.html5Mode(true);

@@ -1,9 +1,19 @@
+main p a,
+main li a{
+    font-family: arial;
+    font-size: 0.85em;
+}
 body main p,
 body main li{
     color:black;
     font:18px/1.5 Georgia, 'Times New Roman', serif;
 }
 
+h1, h2, h3, h4{
+    font-family: Verdana, Tahoma;
+    font-weight: 900;
+    margin-bottom: 15px !important;
+}
 
 .transparent{
     opacity: 0;

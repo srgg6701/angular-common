@@ -2,5 +2,8 @@
   "digest": "digest",
   "watch": "watch",
   "directives": "directives",
-  "promise_and_q":"promise & q library"
+  "promise_and_q": "promise & q library",
+  "http_fruits": "wanna fruits?",
+  "services_types": "provider, factory, service",
+  "services_types_all": "all custom services"
 }
