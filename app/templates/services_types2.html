@@ -1,7 +1,8 @@
 <h2>Factory, Service, Provider [again]</h2>
 <h3>Factory</h3>
 <p>Это ─ наиболее популярный способ создания и настройки сервиса. В данном случае создаётся и возвращается обычный JS-объект, со всеми свойствами, доступными в контроллере.</p>
-
+<p>Данный тип сервиса позволяет использовать переменные типа <code>private</code>. Контроллер не имеет к ним прямого доступа, получить его можно, добавив в сервис <b>getter/setter</b>-методы.</p>
+<p>$scope.thingFromConfig: {{thingFromConfig}}</p>
 <hr>
 <h4>Ссылки</h4>
 <p><a href="http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/">AngularJS: Factory vs Service vs Provider</a></p>

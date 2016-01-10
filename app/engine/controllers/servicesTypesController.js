@@ -7,9 +7,9 @@ app.controller('servicesTypesController',
             $scope.factory  = "factory ==[" + factoryExample  + "]";
             $scope.provider = "provider==[" + providerExample + "]"; */
         console.group();
-        console.log('%cserviceExample:', 'background-color: lightyellow', serviceExample);
-        console.log('%cfactoryExample:', 'background-color: lightskyblue', factoryExample);
-        console.log('%cproviderExample:', 'background-color: lightgreen', providerExample);
+                console.log('%cserviceExample:', 'background-color: lightyellow', serviceExample);
+                console.log('%cfactoryExample:', 'background-color: lightskyblue', factoryExample);
+                console.log('%cproviderExample:', 'background-color: lightgreen', providerExample);
         console.groupEnd();
         //------------------------------------------------------
         console.group();
