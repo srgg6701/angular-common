@@ -23,17 +23,24 @@
     	<div id="container">
         	<div id="main">
             	<nav class="row" ng-controller="navigationController" ng-include="'templates/includes/nav.html'"></nav>
-                <main class="row">
+                <main class="row col-lg-8 col-md-7 col-ms-12 col-xs-12 pull-left">
                 	<section>
-                        <div ng-controller="clientIdController as clientCtrl">
+                        <!--<div ng-controller="clientIdController as clientCtrl">
                             clientId: {{clientCtrl.clientId}}
                         </div>
                         <div ng-controller="apiTokenController">
                             token: <element ng-bind="token"></element>
-                        </div>
+                        </div>-->
                         <div ui-view=""></div>
                     </section>
                 </main>
+                <div id="menu-right" class="col-lg-4 col-md-5 col-ms-12 col-xs-12 pull-left" ng-controller="rightMenuController">
+                    <ul class="nav nav-tabs-justified">
+                        <li ng-repeat="(key, value) in menus track by $index">
+                            <a ui-sref="{{key}}" ng-bind="value"></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <footer ng-include="'templates/includes/footer.html'"></footer>
         </div>

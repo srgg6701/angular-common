@@ -42,3 +42,17 @@ h1, h2, h3, h4{
 .padding15{
     padding:15px;
 }
+#main{
+    overflow: hidden;
+    position: relative;
+}
+@media (min-width: 992px) {
+    #menu-right {
+        background: #eee;
+        position: absolute;
+        right: 0;
+        bottom: 60px;
+        padding-top: 30px;
+        top: 50px;
+    }
+}
