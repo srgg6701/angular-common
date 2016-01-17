@@ -25,13 +25,18 @@ app.controller('defaultController', function($scope){
 });
 
 app.filter('common', function(){
-    return function(input){
-        console.log('input', input);
-        if(input.indexOf('h')!=-1){
-            return 'hi';
+    return function(inputs){
+        console.log('inputs', inputs);
+        for(var i= 0, input, j=inputs.length; i<j; i++){
+            input = inputs[i];
+            console.log('input: ', input);
+            if(input.name.indexOf('h')!=-1){
+                return 'h';
+            }
+            if(input.name.indexOf('o')!=-1){
+                return 'o';
+            }
         }
-        if(input.indexOf('o')!=-1){
-            return 'chiao';
-        }
+        /**/
     }
 });

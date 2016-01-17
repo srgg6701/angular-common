@@ -32,6 +32,7 @@
         </form>
         <hr>
         <h4>filters</h4>
-        <p ng-repeat="greeting in greets | filter:'o'" ng-bind="greeting.name"></p>
+        <!--• фильтрует по всем полям объекта-->
+        <p ng-repeat="greeting in greets | filter:'y' " ng-bind="greeting.name"></p>
     </section>
 </div>
