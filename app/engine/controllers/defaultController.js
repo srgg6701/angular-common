@@ -5,7 +5,7 @@ app.controller('defaultController', function($scope){
     $scope.greets = [
         {name:'Hello'}, {name:'hola'}, {name:'hi'}, {name:'Salut!'}, {name:'Здорова!'}, {name:'chiao'}, {name:'bye-bye'}
     ];
-    $scope.gname = 'name';
+    $scope.gname = '-name';
     $scope.submitForm = function(event){
         if(prompt('Input message plz')){
             var form = event.currentTarget;
