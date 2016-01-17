@@ -24,9 +24,14 @@
             sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>
     </section>
     <section class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <br><br>
         <form ng-submit="submitForm($event)">
-            <input type="text"> Any value, any key ☻
+            <input type="text">
+            <div>Any value, any key ☻</div>
             <button>Submit it!</button>
         </form>
+        <hr>
+        <h4>filters</h4>
+        <p ng-repeat="greeting in greets | orderBy:gname" ng-bind="greeting.name"></p>
     </section>
 </div>

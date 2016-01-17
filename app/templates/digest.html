@@ -8,8 +8,8 @@
     <h4>Subcontroller</h4>
     <p>Yep. The folded controller, rightMenuController, <b>reusing</b>.</p>
     <ul class="nav nav-tabs-justified">
-        <li ng-repeat="menu in menus track by $index">
-            <a ng-repeat="(key, value) in menu" ui-sref="{{value}}" ng-bind="key"></a>
+        <li ng-repeat="(link, text) in menus track by $index">
+            <a ui-sref="{{link}}" ng-bind="text"></a>
         </li>
     </ul>
 </div>
