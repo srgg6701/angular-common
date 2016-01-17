@@ -3,7 +3,13 @@
 app.controller('defaultController', function($scope){
     $scope.content="Hello, Dudes!";
     $scope.greets = [
-        {name:'Hello'}, {name:'hola'}, {name:'hi'}, {name:'Salut!'}, {name:'Здорова!'}, {name:'chiao'}, {name:'bye-bye'}
+        {name:'Hello', surname: 'Yo'},
+        {name:'hola', surname: 'XYZ'},
+        {name:'hi', surname: 'xxx'},
+        {name:'Salut!', surname: 'Ola-Ola'},
+        {name:'Здорова!', surname: 'как корова'},
+        {name:'chiao', surname: 'Italiano fero'},
+        {name:'bye-bye', surname: 'Pure English'}
     ];
     $scope.gname = '-name';
     $scope.submitForm = function(event){
@@ -16,4 +22,16 @@ app.controller('defaultController', function($scope){
             console.log('Form submitting is canceled');
         }
     };
+});
+
+app.filter('common', function(){
+    return function(input){
+        console.log('input', input);
+        if(input.indexOf('h')!=-1){
+            return 'hi';
+        }
+        if(input.indexOf('o')!=-1){
+            return 'chiao';
+        }
+    }
 });

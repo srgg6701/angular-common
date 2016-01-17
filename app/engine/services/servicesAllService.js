@@ -93,6 +93,6 @@ app.provider('servicesAllProvider', function(){
 });
 app.config(function(servicesAllProviderProvider){
     servicesAllProviderProvider.conf = "Hello, Dude!";
-    console.log('servicesAllProvider', servicesAllProviderProvider);
+    //console.log('servicesAllProvider', servicesAllProviderProvider);
 });
 
