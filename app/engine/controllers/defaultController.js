@@ -27,7 +27,7 @@ app.controller('defaultController', function($scope){
 app.filter('common', function(){
     return function(inputs){
         console.log('inputs', inputs);
-        for(var i= 0, input, j=inputs.length; i<j; i++){
+        /*for(var i= 0, input, j=inputs.length; i<j; i++){
             input = inputs[i];
             console.log('input: ', input);
             if(input.name.indexOf('h')!=-1){
@@ -36,7 +36,7 @@ app.filter('common', function(){
             if(input.name.indexOf('o')!=-1){
                 return 'o';
             }
-        }
+        }*/
         /**/
     }
 });

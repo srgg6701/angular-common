@@ -72,6 +72,15 @@ app.service('servicesAllService', function(){
     }
 });
 
+app.service('temporalService', function(){
+    this.name = 'temporalService service';
+    /*var myName = 'temporal everything';
+    return{
+        name: 'myName',
+        lastName: 'myLastName'
+    }*/
+});
+
 app.provider('servicesAllProvider', function(){
     var _name = "srgg", _last_name = "6701";
     this.conf = '';
