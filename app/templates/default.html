@@ -35,9 +35,21 @@
         <!--• фильтрует по всем полям объекта-->
         <p ng-repeat="greeting in greets | filter:'y' " ng-bind="greeting.name"></p>
         <h4>Directive, a special cases</h4>
+        <hr>
+        <h5>Using <code>link</code></h5>
         <div repeat-x="5">Repeat-x comes here!</div>
         <hr>
-        <input type="text" ng-model="repeatYModel">
+        <h5>Using <code>link</code> ► <code>$compile</code></h5>
+        <input placeholder="data: repeatYModel" type="text" ng-model="repeatYModel">
         <div repeat-y="5">{{repeatYModel}}</div>
+        <hr>
+        <h5>Using <code>compile</code> function</h5>
+        <p><code>compile</code> выполняется единовременно, для всех директив.</p>
+        <input placeholder="data: repeatZModel" type="text" ng-model="repeatZModel">
+        <div repeat-z="5">{{repeatZModel}}</div>
+        <hr>
+        <h5>Using <code>compile</code> ► <code>link</code> function</h5>
+        <input placeholder="data: repeatLModel" type="text" ng-model="repeatLModel">
+        <div repeat-l="5" text="{{repeatLModel}}">{{repeatLModel}}</div>
     </section>
 </div>
