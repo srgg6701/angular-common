@@ -15,37 +15,34 @@ app.config(function( $urlRouterProvider, $stateProvider, $locationProvider){
                 url:'/home',
                 templateUrl:'templates/default.html'
             })
-            .state('one',{
-                url:'/one',
-                templateUrl:'templates/one.html'
+            .state('modules',{
+                url:'/modules',
+                templateUrl:'templates/modules.html'
             })
-            .state('two',{
-                url:'/two',
+            .state('controller',{
+                url:'/controller',
                 templateUrl:'templates/two.html'
-            })
-            .state('tree',{
-                url:'/tree',
-                templateUrl:'templates/tree.html'
-            })
-            .state('four',{
-                url:'/four',
-                templateUrl:'templates/four.html'
-            })
-            .state('digest',{
-                url:'/digest',
-                controller:'digestController',
-                templateUrl:'templates/digest.html'
             })
             .state('directives',{
                 url:'/directives',
                 controller:'directivesController',
                 templateUrl:'templates/directives.html'
             })
-           .state('services',{
-               url:'/services',
-               controller:'servicesController',
-               templateUrl:'templates/services.html'
-           })
+            .state('services',{
+                url:'/services',
+                controller:'servicesController',
+                templateUrl:'templates/services.html'
+            })
+            .state('filters',{
+                url:'/filters',
+                controller:'servicesController',
+                templateUrl:'templates/filters.html'
+            })
+            .state('digest',{
+                url:'/digest',
+                controller:'digestController',
+                templateUrl:'templates/digest.html'
+            })
             .state('promise_and_q',{
                 url:'/promise_and_q',
                 controller:'promisesController',

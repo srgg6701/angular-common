@@ -1,9 +1,12 @@
 app.controller('navigationController', function($scope){
-    $scope.home = { link:'home',text:'Главная'};
+    $scope.home = {
+        link:'home',text:'Home'
+    };
     $scope.menus=[
-        {'one':'Первая'},
-        {'two':'Вторая'},
-        {'tree':'Третья'},
-        {'four':'Четвёртая'}
+        {'modules':'Modules'},
+        {'controllers':'Controllers'},
+        {'directives':'Directives'},
+        {'services':'Services'},
+        {'filters':'Filters'}
     ];
 });
