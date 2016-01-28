@@ -13,3 +13,46 @@
 <p ng-bind-template="{{ preface2 }}: {{ fromTemplate1 }}, {{ fromTemplate2 }}"></p>
 <p ng-bind-html="smallHTML"></p>
 <p ng-bind-html="smallHTML2"></p>
+<br><br>
+<form ng-submit="submitForm($event)">
+    <input type="text">
+    <div>Any value, any key ☻</div>
+    <button>Submit it!</button>
+</form>
+<hr>
+<h4>filters</h4>
+<!--• фильтрует по всем полям объекта-->
+<p ng-repeat="greeting in greets | filter:'y' " ng-bind="greeting.name"></p>
+<h4>Directive, a special cases</h4>
+<hr>
+
+<h5>X. Using <code>link</code></h5>
+<div repeat-x="5">Repeat-x comes here!</div>
+<hr>
+
+<h5>Y. Using <code>link</code> ► <code>$compile</code></h5>
+<input placeholder="data: repeatYModel" type="text" ng-model="repeatYModel">
+<div repeat-y="5">{{repeatYModel}}</div>
+<hr>
+
+<h5>Color set</h5>
+<!--<input type="text" ng-model="color" placeholder="Enter a color"/>-->
+color set: <color-set color="color"></color-set>
+
+<h5>Z. Using <code>compile</code> function</h5>
+<p><code>compile</code> выполняется единовременно, для всех директив.</p>
+<input placeholder="data: repeatZModel" type="text" ng-model="repeatZModel">
+<div repeat-z="5">{{repeatZModel}}</div>
+
+<hr>
+
+<h5>L. Using <code>compile</code> ► <code>link</code> function</h5>
+<input placeholder="data: repeatLModel" type="text" ng-model="repeatLModel">
+<div repeat-l="5" text="{{repeatLModel}}">{{repeatLModel}}</div>
+
+<br>
+<br>
+<div id="marked"></div>
+<p>name: <input type="text" ng-model="nameModel"> {{nameModel}}</p>
+<p>markup: <input type="text" ng-model="markup"> {{markup}}</p>
+<button ng-click="setMarkup(markup)">Compile</button>

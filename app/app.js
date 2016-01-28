@@ -19,9 +19,9 @@ app.config(function( $urlRouterProvider, $stateProvider, $locationProvider){
                 url:'/modules',
                 templateUrl:'templates/modules.html'
             })
-            .state('controller',{
-                url:'/controller',
-                templateUrl:'templates/two.html'
+            .state('controllers',{
+                url:'/controllers',
+                templateUrl:'templates/controllers.html'
             })
             .state('directives',{
                 url:'/directives',
@@ -30,7 +30,7 @@ app.config(function( $urlRouterProvider, $stateProvider, $locationProvider){
             })
             .state('services',{
                 url:'/services',
-                controller:'servicesController',
+                controller:'servicesAllController',
                 templateUrl:'templates/services.html'
             })
             .state('filters',{
@@ -57,12 +57,12 @@ app.config(function( $urlRouterProvider, $stateProvider, $locationProvider){
                 url:'/services_types',
                 controller:'servicesTypesController',
                 templateUrl:'templates/services_types.html'
-            })
+            })/*
             .state('services_types_all',{
                 url:'/services_types_all',
                 controller:'servicesAllController',
                 templateUrl:'templates/services_types2.html'
-            })
+            })*/
             .state('services_types_all2',{
                 url:'/services_types_all2',
                 controller:'servicesAllControllerNext',

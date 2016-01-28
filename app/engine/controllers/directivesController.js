@@ -1,7 +1,15 @@
 "use strict";
 
 //
-app.controller('directivesController', function($scope, $sce){
+app.controller('directivesController', function($scope, $sce, $compile){
+
+    $scope.color = 'Uncolored';
+    $scope.setMarkup = function(markup){
+        console.log('setMarkup works; markup, $scope, $compile: ', markup, $scope, $compile);
+        $compile(markup)($scope).appendTo(angular.element("#marked"));
+        return true;
+    };
+
     $scope.preface = "Контент, полученный через ng-bind";
     $scope.preface2 = "Контент, полученный через ng-bind-template";
     $scope.fromTemplate1 = "Значение поля 1";

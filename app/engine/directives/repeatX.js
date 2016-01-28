@@ -40,16 +40,34 @@ app.directive('repeatY', function($compile){
         }
     }
 });
+
+
+app.directive('colorSet', function() {
+    return {
+        restrict: 'E',
+        scope: {
+            color: '='
+        },
+        link : function($scope, elem, attrs){
+            elem.html('new content: '+$scope.color);
+        }
+    // the rest of the configurations
+    };
+});
+
 app.directive('repeatZ', function($compile){
     return {
         compile: function (el, attributes){
-            for( var el_cloned,
-                     i= 0,
-                     j=Number(attributes.repeatZ)-1; i<j;
-                 i++){
-                el_cloned = el.clone();
-                el.after(el_cloned.attr('repeat-z', 0));
-            }
+            return function($scope,el,attributes) {
+                //linking function here
+                for( var el_cloned,
+                         i= 0,
+                         j=Number(attributes.repeatZ)-1; i<j;
+                     i++){
+                    el_cloned = el.clone();
+                    el.after($compile(el_cloned.attr('repeat-z', 0))($scope));
+                }
+            };
         }
     }
 });
